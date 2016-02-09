@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "node-dogstatsd": "0.0.6",
+    "node-dogstatsd": "0.0.6"
   },
   "repository": {
     "type": "git",
