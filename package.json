@@ -1,0 +1,22 @@
+{
+  "name": "datadog-event",
+  "version": "1.0.0",
+  "description": "Write events to datadog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-dogstatsd": "0.0.6",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/worximity/datadog-event.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/worximity/datadog-event/issues"
+  },
+  "homepage": "https://github.com/worximity/datadog-event#readme"
+}
