@@ -1,6 +1,6 @@
 'use strict';
 
-var DD = require("node-dogstatsd").StatsD;
+const DD = require("node-dogstatsd").StatsD;
 
 class DatadogEvent {
 
