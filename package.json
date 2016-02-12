@@ -1,6 +1,6 @@
 {
   "name": "datadog-event",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Write events to datadog",
   "main": "index.js",
   "scripts": {
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/worximity/datadog-event.git"
+    "url": "git@github.com:ensonik/datadog-event.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/worximity/datadog-event/issues"
+    "url": "https://github.com/ensonik/datadog-event/issues"
   },
-  "homepage": "https://github.com/worximity/datadog-event#readme"
+  "homepage": "https://github.com/ensonik/datadog-event"
 }
