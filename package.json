@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git@github.com:ensonik/datadog-event.git"
   },
-  "author": "",
+  "author": "mike.mclean.1@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ensonik/datadog-event/issues"
