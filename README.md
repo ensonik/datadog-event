@@ -10,11 +10,11 @@ Writes an event to Datadog through the node-dogstatsd library.
 # Using in code
     
      var DD = require("node-dogstatsd").StatsD;
-     ...
+     var DatadogEvent = require('datadog-event')
      
-     var DatadogEvent = require('datadog-event')( {"dogstatsd":new DD("localhost",8125)} );
      ...
-     DatadogEvent.write("My Title","My Description", {tags:["mytags"]});
+     let datadogEvent = new DatadogEvent(( {"dogstatsd":new DD()} ));
+     datadogEvent.write("My Title","My Description", {tags:["mytags"]});     
 
 When creating a new `datadog-event` you can pass in your own dogstatsd object or let the module create a default one (localhost:8125). 
 
