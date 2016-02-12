@@ -2,7 +2,7 @@
 
 const expect = require('chai').expect;
 const StatsD = require('node-dogstatsd').StatsD;
-const DatadogEvent = require("./index");
+const DatadogEvent = require("../index");
 
 describe('The event writer tags option', function () {
 
@@ -35,7 +35,7 @@ describe('The event writer tags option', function () {
             .write("My Title", "My Text");
     });
 
-    it('should write function tags only when no global tags', function(done) {
+    it('should write function tags only when no global tags', function (done) {
         setMessageExpectation("_e{8,7}:My Title|My Text|#f1:1,f2:2", this.server, done);
 
         aDatadogEvent()
@@ -43,8 +43,8 @@ describe('The event writer tags option', function () {
             .write("My Title", "My Text", {tags:["f1:1", "f2:2"]});
     });
 
-    it('should not write tag information if non are given', function(done) {
-        setMessageExpectation("_e{8,7}:My Title|My Text|#", this.server, done);
+    it('should not write tag information if non are given', function (done) {
+        setMessageExpectation("_e{8,7}:My Title|My Text", this.server, done);
 
         aDatadogEvent()
             .withNoGlobalTags()
