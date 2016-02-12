@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/datadog-event.png)](https://npmjs.org/package/datadog-event)
+
 Writes an event to Datadog through the node-dogstatsd library. 
 
 # Importing
