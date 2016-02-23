@@ -4,22 +4,21 @@ Writes an event to Datadog through the node-dogstatsd library.
 
 # Importing
 
-     "datadog-event": "0.0.0"
+     "datadog-event": "1.2.1"
 
 
-# Using in code
+# Usage
     
-     var DD = require("node-dogstatsd").StatsD;
-     var DatadogEvent = require('datadog-event')
+     const DD = require("node-dogstatsd").StatsD;
+     const DatadogEvent = require('datadog-event')
      
      ...
-     let datadogEvent = new DatadogEvent(( {"dogstatsd":new DD()} ));
-     datadogEvent.write("My Title","My Description", {tags:["mytags"]});     
+     let datadogEvent = new DatadogEvent({ "dogstatsd":new DD() });
+     datadogEvent.write("My Title", "My Description", { tags:["mytags"] });     
 
 When creating a new `datadog-event` you can pass in your own dogstatsd object or let the module create a default one (localhost:8125). 
 
-Options available on the write object include:
-
+Options available on the write:
 * date_happened (numeric)
 * host_name
 * priority
@@ -37,14 +36,16 @@ The write method acceps 4 parameters
 datadogEvent.write(title, text, options, callback);
 ```
 
-The callback is used only in case of an error with the data passed in and is optional. For example:
+The callback is used when there is a data input validation error and is optional. For example:
 
 ```
-datadogEvent.write("My Title", "My Text", {tags:["a:b"], function(err) {
+datadogEvent.write(null, "My Text", {tags:["a:b"], function(err) {
     if (err) {
         console.error(err.message);
     }
 });
+
+// Outputs an error because the title is null
 ```
 
 
