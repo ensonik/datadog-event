@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- 'test/*.test.js'"
+    "coverage": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha"
   },
   "dependencies": {
+    "lodash": "4.6.1",
     "node-dogstatsd": "0.0.6"
   },
   "devDependencies": {

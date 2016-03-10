@@ -50,10 +50,10 @@ describe('The event writer tags option', function () {
     });
 
     it('should write all information', function (done) {
-        setMessageExpectation("_e{1,1}:a|b|d:12038123|h:myh|p:low|t:info|#gt1:1,t1:1,t2:2", this.server, done);
+        setMessageExpectation("_e{1,1}:a|b|d:12038123|h:myhost|p:low|t:info|#gt1:1,t1:1,t2:2", this.server, done);
 
         var de = new DatadogEvent({"dogstatsd":new StatsD("localhost", 8125, null, {"global_tags": ["gt1:1"]})});
-        de.write("a", "b", {date_happened:12038123, host_name:"myh", priority:"low", alert_type:"info", tags:["t1:1","t2:2"]});
+        de.write("a", "b", {date_happened:12038123, host_name:"myhost", priority:"low", alert_type:"info", tags:["t1:1","t2:2"]});
     });
 
     function setMessageExpectation(message, server, done){
